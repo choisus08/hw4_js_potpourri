@@ -59,3 +59,9 @@ const bankInfo = {
     creditCard: -200
 }
 
+const bankAccountSummary = ({savings, checking, moneyMarket, creditCard}) => {
+    console.log(savings + checking + moneyMarket + creditCard);
+
+}
+bankAccountSummary(bankInfo)
+
