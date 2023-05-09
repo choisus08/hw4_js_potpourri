@@ -8,15 +8,24 @@ const words = {
     adjective: "",
     pluralNoun: "",
     adverb: "",
-    anotherAdjective: "",
-}
+    anotherAdjective: ""
+};
 
 //////////// Interact With the User ////////////
 
-/* Start by creating a function called startMadlib that prompts a user to enter each word type and save their input to the appropriate object key. 
-For example, the following prompt's user input should be saved to the number key in our words object: */
+/* Start by creating a function called startMadlib that prompts a user to enter each word type and save their input 
+to the appropriate object key. */
 
-const startMadlib = (prompt) => {
-    
+const startMadlib = ({number, adjective, pluralNoun, adverb, anotherAdjective}) => {
+    number = prompt("Give me any number");
+    adjective = prompt("Give me an adjective");
+    pluralNoun = prompt("Give me a plural noun");
+    adverb = prompt("Give me an adverb");
+    anotherAdjective = prompt("Give me another adjective");
+    return {number, adjective, pluralNoun, adverb, anotherAdjective}
+
 }
+console.log(startMadlib(words));
+
+
 
