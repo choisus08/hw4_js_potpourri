@@ -97,5 +97,4 @@ const inTheRed = (num) => {
 }
 console.log(inTheRed(bankAccountSummary(bankInfo)))
 
-//////////// MadLibs ////////////
 
