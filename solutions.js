@@ -34,6 +34,10 @@ oddNumberCount(7);
 
 //////////// Disemvoweling Trolls ////////////
 
+/* Trolls are attacking your comment section! Let's neutralize the threat by removing all vowels from their comments. 
+That'll make them look real silly. Write a function named trollsBeGone which receives one argument that should be a sentence (a string). 
+The function should return a new string with all the vowels removed from the original string. */
+
 const trollsBeGone = (string) => {
     // create a variable that contains vowels in an array
     const vowels = ['a','e','i','o','u','A','E','I','O','U']
@@ -52,16 +56,43 @@ console.log(trollsBeGone("This website is for losers LOL"))
 
 //////////// Bank Account Summary ////////////
 
+/* Make an object named bankInfo with your banking info that includes the keys listed below. 
+Each key should have a number value that can either be negative or positive (e.g. -500 or 500). 
+savings
+checking
+moneyMarket
+creditCard
+*/
+
 const bankInfo = {
-    savings: 500,
-    checking: 300,
-    moneyMarket: -100,
-    creditCard: -200
+    savings: 400,
+    checking: 200,
+    moneyMarket: 100,
+    creditCard: -500
 }
+
+/* Write a function called bankAccountSummary that accepts your bankInfo object as an argument. 
+The function should calculate the total of your bank account and return it. */
+
+// Save your bankAccountSummary total to a variable called bankTotal
 
 const bankAccountSummary = ({savings, checking, moneyMarket, creditCard}) => {
-    console.log(savings + checking + moneyMarket + creditCard);
-
+    const bankTotal = savings + checking + moneyMarket + creditCard
+    return bankTotal
+   
 }
-bankAccountSummary(bankInfo)
+console.log(bankAccountSummary(bankInfo))
 
+
+/* Write another function called inTheRed that accepts your bank account summary total (number) as an argument. 
+The function should return true if your total is less than 0, and false otherwise. */
+
+
+const inTheRed = (num) => {
+    if (num<0) {
+        return true
+    }else {
+        return false
+    }
+}
+console.log(inTheRed(bankAccountSummary(bankInfo)))
